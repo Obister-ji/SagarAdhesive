@@ -1057,7 +1057,7 @@
             </div>
             <nav aria-label="Main navigation">
                 <ul>
-                    <li><a href="#products">Products</a></li>
+                    <li><a href="#products" aria-current="page">Products</a></li>
                     <li><a href="#about">About</a></li>
                     
                     <li><a href="#contact">Contact</a></li>
@@ -1081,12 +1081,12 @@
 
     <!-- Products Section -->
     <section id="products" aria-labelledby="products-heading">
-        <h2 id="products-heading" class="section-heading">Our Products</h2>
+        <h2 id="products-heading" class="section-heading" style="text-align: center; margin-bottom: 1rem; color: #333; position: relative; display: inline-block; left: 50%; transform: translateX(-50%);">Our Products</h2>
         <div class="product-filters" role="tablist" aria-label="Product category filters">
             <button class="filter-btn" data-filter="all" role="tab" aria-selected="true" aria-controls="product-container">All Products</button>
             <button class="filter-btn" data-filter="powder" role="tab" aria-selected="false" aria-controls="product-container">Powders</button>
             <button class="filter-btn" data-filter="liquid" role="tab" aria-selected="false" aria-controls="product-container">Liquids</button>
-            <button class="filter-btn" data-filter="chemical" role="tab" aria-selected="false" aria-controls="product-container">Chemicals</button>
+            
         </div>
         <div class="product-container" id="product-container" role="tabpanel">
             <article class="product" data-category="powder" aria-labelledby="bentonite-powder" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
@@ -1129,17 +1129,17 @@
                 <h3 id="flusper-powder">Flusper Powder</h3>
                 <p>A specialized fluxing agent for metallurgical processes.</p>
             </article>
-            <article class="product" data-category="chemical" aria-labelledby="silico-fluoride-powder" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s;">
+            <article class="product" data-category="chemical" aria-labelledby="silico-fluoride-powder" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
                 <img src="https://i.ibb.co/5WvKMVnd/silico-fluoride-powder.jpg" alt="Silico fluoride powder" loading="lazy">
                 <h3 id="silico-fluoride-powder">Silico Fluoride Powder</h3>
                 <p>Used in water fluoridation and industrial applications.</p>
             </article>
-            <article class="product" data-category="chemical" aria-labelledby="boric-acid-powder" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s;">
+            <article class="product" data-category="chemical" aria-labelledby="boric-acid-powder" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
                 <img src="https://i.ibb.co/NnrrkQsk/boric-acid-powder.jpg" alt="Boric acid powder" loading="lazy">
                 <h3 id="boric-acid-powder">Boric Acid Powder</h3>
                 <p>A versatile compound used in adhesives, flame retardants, and more.</p>
             </article>
-            <article class="product" data-category="liquid" aria-labelledby="modified-phosphoric-acid" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s;">
+            <article class="product" data-category="liquid" aria-labelledby="modified-phosphoric-acid" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
                 <img src="https://i.ibb.co/398d46mn/modified-phosphoric-acid.jpg" alt="Modified phosphoric acid" loading="lazy">
                 <h3 id="modified-phosphoric-acid">Modified Phosphoric Acid</h3>
                 <p>Enhanced with adhesive properties for specialized industrial use.</p>
@@ -1152,13 +1152,13 @@
         <div class="about-content">
             <h2 id="about-heading" class="section-heading">About Sagar Adhesive</h2>
             <div class="about-grid">
-                <div class="about-text" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s;">
+                <div class="about-text" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
                     <p class="intro-text">Welcome to <strong>Sagar Adhesive</strong>—your trusted partner for premium-quality adhesive powders and industrial chemicals.</p>
-                    <div class="luxury-highlight" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s;">
+                    <div class="luxury-highlight" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
                         <h3>Our Mission</h3>
                         <p>We are committed to providing innovative, sustainable, and high-quality adhesive solutions that meet the diverse needs of industries worldwide.</p>
                     </div>
-                    <div class="luxury-highlight" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s;">
+                    <div class="luxury-highlight" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
                         <h3>Why Choose Us?</h3>
                         <ul class="why-choose-list">
                             <li><strong>Premium Quality</strong> – Manufactured to the highest standards with rigorous quality control.</li>
@@ -1170,7 +1170,7 @@
                     </div>
                     <p class="closing-text">We believe in creating strong bonds—not just in our adhesives but also with our customers. Our team of experts is dedicated to providing technical support and customized solutions to meet your specific requirements.</p>
                 </div>
-                <div class="about-logo" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s;">
+                <div class="about-logo" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
                     <img src="https://i.ibb.co/CK2zFMM7/logo.png" alt="Sagar Adhesive Logo" class="luxury-logo" loading="lazy">
                 </div>
             </div>
@@ -1186,7 +1186,7 @@
         </h2>
         
         <div class="testimonial-slider" style="max-width: 800px; margin: 0 auto; position: relative; overflow: hidden; background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); padding: 2rem;">
-            <div class="slides" style="display: flex; transition: transform 0.5s; width: 100%; transform: translateX(-200%);">
+            <div class="slides" style="display: flex; transition: transform 0.5s; width: 100%; transform: translateX(-100%);">
                 <div class="slide" style="min-width: 100%; padding: 1rem; box-sizing: border-box; text-align: center;">
                     <p style="font-style: italic; font-size: 1.1rem; color: #555; line-height: 1.6; margin-bottom: 1.5rem;">
                         "Sagar Adhesive provides the highest quality products with exceptional customer service. Their bentonite powder has significantly improved our production quality. Highly recommended!"
@@ -1336,7 +1336,7 @@
     </div>
 
     <!-- Back to Top Button -->
-    <button class="back-to-top" aria-label="Back to top" style="display: none;"><i class="fas fa-arrow-up"></i></button>
+    <button class="back-to-top" aria-label="Back to top" style="display: block;"><i class="fas fa-arrow-up"></i></button>
 
     <script defer="">
         // Loading Animation
