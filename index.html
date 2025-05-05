@@ -1,9 +1,41 @@
 <html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sagar Adhesive - Luxury Adhesive Solutions</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Sagar Adhesive - Premium Adhesive Powders &amp; Industrial Chemicals</title>
+    <meta name="description" content="Sagar Adhesive provides high-quality adhesive powders and industrial chemicals, including bentonite, dextrin, and sodium silicate for diverse industrial applications.">
+    <meta name="keywords" content="adhesive powders, industrial chemicals, bentonite powder, dextrin powder, sodium silicate, carboxymethyl cellulose, Sagar Adhesive, premium adhesives">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Sagar Adhesive">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.sagaradhesive.com/">
+    <meta property="og:title" content="Sagar Adhesive - Premium Adhesive Powders &amp; Industrial Chemicals">
+    <meta property="og:description" content="Explore premium adhesive powders and industrial chemicals from Sagar Adhesive, trusted for quality and innovation.">
+    <meta property="og:image" content="https://i.ibb.co/CK2zFMM7/logo.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sagar Adhesive - Premium Adhesive Powders &amp; Industrial Chemicals">
+    <meta name="twitter:description" content="Explore premium adhesive powders and industrial chemicals from Sagar Adhesive, trusted for quality and innovation.">
+    <meta name="twitter:image" content="https://i.ibb.co/CK2zFMM7/logo.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.sagaradhesive.com/">
+
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="https://i.ibb.co/CK2zFMM7/logo.png">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" async="">
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://i.ibb.co/CK2zFMM7/logo.png" as="image">
+    <link rel="preload" href="https://i.ibb.co/jkchNHWG/bentonite.jpg" as="image">
+
+    <!-- Sitemap -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
     <style>
         /* General Styles */
         body {
@@ -88,11 +120,11 @@
             color: #ffd700;
         }
 
-        nav ul li a.active {
+        nav ul li a[aria-current="page"] {
             color: #ffd700;
         }
 
-        nav ul li a.active::after {
+        nav ul li a[aria-current="page"]::after {
             width: 100%;
         }
 
@@ -246,7 +278,7 @@
             transition: all 0.3s;
         }
 
-        .filter-btn.active {
+        .filter-btn[aria-selected="true"] {
             background: #ffd700;
         }
 
@@ -335,33 +367,6 @@
         .product:hover {
             transform: translateY(-10px);
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Stats Section */
-        #stats {
-            background: #1a1a1a;
-            color: white;
-            padding: 4rem 0;
-            text-align: center;
-        }
-
-        .stats-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-        }
-
-        .stat-item {
-            margin: 1rem;
-            padding: 1rem;
-        }
-
-        .counter {
-            font-size: 3rem;
-            font-weight: bold;
-            color: #ffd700;
         }
 
         /* About Section */
@@ -582,6 +587,16 @@
             text-align: center;
         }
 
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+            align-items: flex-start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
         .form-group {
             margin-bottom: 1rem;
             position: relative;
@@ -644,19 +659,61 @@
             left: 50%;
             transform: translate(-50%, -50%);
             display: none;
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #333;
+            border-radius: 50%;
+            width: 24px;
+            height: 24px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
         }
 
         #formSuccess, #formError {
             display: none;
             margin-top: 1rem;
+            font-size: 1rem;
         }
 
         #formSuccess {
-            color: green;
+            color: #51cf66;
         }
 
         #formError {
-            color: red;
+            color: #ff6b6b;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #fdfdfd, #f7f7f7);
+            padding: 2.5rem;
+            border-radius: 16px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-width: 280px;
+            max-width: 500px;
+            flex: 1;
+        }
+
+        .contact-info h3 {
+            margin-top: 0;
+        }
+
+        .contact-info div {
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-info i {
+            font-size: 1.5rem;
+            color: #ffd700;
         }
 
         .map-container {
@@ -665,6 +722,9 @@
             border-radius: 10px;
             overflow: hidden;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Newsletter Section */
@@ -690,6 +750,7 @@
             padding: 1rem;
             border: none;
             border-radius: 5px 0 0 5px;
+            font-size: 1rem;
         }
 
         #newsletterForm button {
@@ -700,6 +761,7 @@
             border-radius: 0 5px 5px 0;
             cursor: pointer;
             transition: all 0.3s;
+            font-size: 1rem;
         }
 
         #newsletterForm button:hover {
@@ -708,6 +770,7 @@
 
         #newsletterMessage {
             margin-top: 1rem;
+            font-size: 1rem;
         }
 
         /* Footer */
@@ -716,6 +779,7 @@
             color: white;
             text-align: center;
             padding: 2rem 0;
+            border-top: 3px solid #ffd700;
         }
 
         .socials a {
@@ -775,25 +839,22 @@
         }
 
         /* Back to Top Button */
-        #backToTop {
-            display: none;
+        .back-to-top {
             position: fixed;
-            bottom: 80px;
+            bottom: 25px;
             left: 25px;
             background: #ffd700;
             color: #333;
-            border: none;
+            padding: 10px 15px;
             border-radius: 50%;
-            width: 50px;
-            height: 50px;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             cursor: pointer;
-            z-index: 99;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            transition: all 0.3s;
+            display: none;
+            z-index: 1000;
+            transition: 0.3s;
         }
 
-        #backToTop:hover {
+        .back-to-top:hover {
             background: #e6b800;
             transform: scale(1.1);
         }
@@ -877,6 +938,11 @@
                 max-width: 100%;
             }
 
+            .contact-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
             #newsletterForm {
                 flex-direction: column;
             }
@@ -897,6 +963,85 @@
             }
         }
     </style>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Sagar Adhesive",
+        "url": "https://www.sagaradhesive.com/",
+        "logo": "https://i.ibb.co/CK2zFMM7/logo.png",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-83183-30811",
+            "contactType": "customer service",
+            "email": "sagaradhesivejhs@gmail.com",
+            "areaServed": "IN",
+            "availableLanguage": "English"
+        },
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Sector-A Sidhguwan Phase-1",
+            "addressLocality": "Sagar",
+            "addressRegion": "Madhya Pradesh",
+            "postalCode": "470003",
+            "addressCountry": "IN"
+        },
+        "sameAs": [
+            "https://www.instagram.com/sagar_adhesive/",
+            "https://wa.me/918318330811"
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    [
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Bentonite Powder",
+            "image": "https://i.ibb.co/jkchNHWG/bentonite.jpg",
+            "description": "High-quality industrial-grade bentonite powder for various applications.",
+            "brand": {
+                "@type": "Brand",
+                "name": "Sagar Adhesive"
+            }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Dextrin Powder",
+            "image": "https://i.ibb.co/CsWpZ685/dextrin.jpg",
+            "description": "Superior adhesive-grade dextrin powder for industrial needs.",
+            "brand": {
+                "@type": "Brand",
+                "name": "Sagar Adhesive"
+            }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Carboxymethyl Cellulose",
+            "image": "https://i.ibb.co/wr0vwrr0/carboxymethyl-cellulose.jpg",
+            "description": "A versatile thickening and stabilizing agent for industrial applications.",
+            "brand": {
+                "@type": "Brand",
+                "name": "Sagar Adhesive"
+            }
+        },
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Sodium Silicate Powder",
+            "image": "https://i.ibb.co/4ZdrFN4F/sodium-silicate-powder.jpg",
+            "description": "An essential binder and adhesive for industrial processes.",
+            "brand": {
+                "@type": "Brand",
+                "name": "Sagar Adhesive"
+            }
+        }
+    ]
+    </script>
 </head>
 <body class="vsc-initialized">
     <!-- Loading Animation -->
@@ -906,116 +1051,114 @@
     <header>
         <div class="header-content">
             <div class="logo">
-                <img src="https://i.ibb.co/CK2zFMM7/logo.png" alt="Sagar Adhesive Logo">
+                <a href="/" aria-label="Sagar Adhesive Home">
+                    <img src="https://i.ibb.co/CK2zFMM7/logo.png" alt="Sagar Adhesive Logo" loading="eager">
+                </a>
             </div>
-            <nav>
+            <nav aria-label="Main navigation">
                 <ul>
-                    <li><a href="#products" class="">Products</a></li>
-                    <li><a href="#about" class="">About</a></li>
-                    <li><a href="#contact" class="">Contact</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#about">About</a></li>
+                    
+                    <li><a href="#contact">Contact</a></li>
+                    
                 </ul>
             </nav>
             <div class="header-cta">
-                <a href="#contact" class="cta">Get in Touch</a>
+                <a href="#contact" class="cta" aria-label="Get in touch with Sagar Adhesive">Get in Touch</a>
             </div>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" aria-labelledby="hero-heading">
         <div class="hero-overlay">
-            <h1>Premium Adhesive Solutions</h1>
-            <p>Experience the finest quality adhesives and industrial chemicals.</p>
-            <a href="#products" class="cta">Explore Products</a>
+            <h1 id="hero-heading">Premium Adhesive Solutions</h1>
+            <p>Discover top-quality adhesive powders and industrial chemicals for your industry.</p>
+            <a href="#products" class="cta" aria-label="Explore Sagar Adhesive products">Explore Products</a>
         </div>
     </section>
 
     <!-- Products Section -->
-    <section id="products">
-        <div class="product-filters">
-            <button class="filter-btn" data-filter="all">All Products</button>
-            <button class="filter-btn" data-filter="powder">Powders</button>
-            <button class="filter-btn" data-filter="liquid">Liquids</button>
-            
+    <section id="products" aria-labelledby="products-heading">
+        <h2 id="products-heading" class="section-heading">Our Products</h2>
+        <div class="product-filters" role="tablist" aria-label="Product category filters">
+            <button class="filter-btn" data-filter="all" role="tab" aria-selected="true" aria-controls="product-container">All Products</button>
+            <button class="filter-btn" data-filter="powder" role="tab" aria-selected="false" aria-controls="product-container">Powders</button>
+            <button class="filter-btn" data-filter="liquid" role="tab" aria-selected="false" aria-controls="product-container">Liquids</button>
+            <button class="filter-btn" data-filter="chemical" role="tab" aria-selected="false" aria-controls="product-container">Chemicals</button>
         </div>
-        
-        <div class="product-container">
-            <!-- Existing Products -->
-            <div class="product" data-category="powder" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s; display: none;">
-                <img src="https://i.ibb.co/jkchNHWG/bentonite.jpg" alt="Bentonite Powder">
-                <h3>Bentonite Powder</h3>
+        <div class="product-container" id="product-container" role="tabpanel">
+            <article class="product" data-category="powder" aria-labelledby="bentonite-powder" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                <img src="https://i.ibb.co/jkchNHWG/bentonite.jpg" alt="High-quality bentonite powder" loading="lazy">
+                <h3 id="bentonite-powder">Bentonite Powder</h3>
                 <p>High-quality industrial-grade bentonite powder.</p>
-            </div>
-            <div class="product" data-category="powder" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s; display: none;">
-                <img src="https://i.ibb.co/CsWpZ685/dextrin.jpg" alt="Dextrin Powder">
-                <h3>Dextrin Powder</h3>
+            </article>
+            <article class="product" data-category="powder" aria-labelledby="dextrin-powder" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                <img src="https://i.ibb.co/CsWpZ685/dextrin.jpg" alt="Superior dextrin powder" loading="lazy">
+                <h3 id="dextrin-powder">Dextrin Powder</h3>
                 <p>Superior adhesive-grade dextrin powder for your needs.</p>
-            </div>
-
-            <!-- New Products -->
-            <div class="product" data-category="chemical" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s; display: block;">
-                <img src="https://i.ibb.co/wr0vwrr0/carboxymethyl-cellulose.jpg" alt="Carboxymethyl Cellulose">
-                <h3>Carboxymethyl Cellulose</h3>
+            </article>
+            <article class="product" data-category="chemical" aria-labelledby="carboxymethyl-cellulose" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                <img src="https://i.ibb.co/wr0vwrr0/carboxymethyl-cellulose.jpg" alt="Carboxymethyl cellulose powder" loading="lazy">
+                <h3 id="carboxymethyl-cellulose">Carboxymethyl Cellulose</h3>
                 <p>A versatile thickening and stabilizing agent for industrial applications.</p>
-            </div>
-            <div class="product" data-category="chemical" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s; display: block;">
-                <img src="https://i.ibb.co/4whLX5FV/mona-aluminium-phosphate.jpg" alt="Mona Aluminium Phosphate">
-                <h3>Mona Aluminium Phosphate</h3>
+            </article>
+            <article class="product" data-category="chemical" aria-labelledby="mona-aluminium-phosphate" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                <img src="https://i.ibb.co/4whLX5FV/mona-aluminium-phosphate.jpg" alt="Mona aluminium phosphate" loading="lazy">
+                <h3 id="mona-aluminium-phosphate">Mona Aluminium Phosphate</h3>
                 <p>Available in liquid and powder forms for high-performance applications.</p>
-            </div>
-            <div class="product" data-category="chemical" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s; display: block;">
-                <img src="https://i.ibb.co/4ZdrFN4F/sodium-silicate-powder.jpg" alt="Sodium Silicate Powder">
-                <h3>Sodium Silicate Powder</h3>
+            </article>
+            <article class="product" data-category="chemical" aria-labelledby="sodium-silicate-powder" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                <img src="https://i.ibb.co/4ZdrFN4F/sodium-silicate-powder.jpg" alt="Sodium silicate powder" loading="lazy">
+                <h3 id="sodium-silicate-powder">Sodium Silicate Powder</h3>
                 <p>An essential binder and adhesive in various industrial processes.</p>
-            </div>
-            <div class="product" data-category="chemical" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s; display: block;">
-                <img src="https://i.ibb.co/Cdmh5jD/modified-stpp.jpg" alt="Modified Sodium Tripolyphosphate">
-                <h3>Modified Sodium Tripolyphosphate (STPP)</h3>
+            </article>
+            <article class="product" data-category="chemical" aria-labelledby="modified-stpp" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                <img src="https://i.ibb.co/Cdmh5jD/modified-stpp.jpg" alt="Modified sodium tripolyphosphate" loading="lazy">
+                <h3 id="modified-stpp">Modified Sodium Tripolyphosphate (STPP)</h3>
                 <p>A high-performance water softener and detergent builder.</p>
-            </div>
-            <div class="product" data-category="chemical" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s; display: block;">
-                <img src="https://i.ibb.co/v66bPSLq/modified-shmp.jpg" alt="Modified Sodium Hexametaphosphate">
-                <h3>Modified Sodium Hexametaphosphate (SHMP)</h3>
+            </article>
+            <article class="product" data-category="chemical" aria-labelledby="modified-shmp" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                <img src="https://i.ibb.co/v66bPSLq/modified-shmp.jpg" alt="Modified sodium hexametaphosphate" loading="lazy">
+                <h3 id="modified-shmp">Modified Sodium Hexametaphosphate (SHMP)</h3>
                 <p>Used as a sequestrant and dispersant in industrial applications.</p>
-            </div>
-            <div class="product" data-category="powder" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s; display: none;">
-                <img src="https://i.ibb.co/rf40VCpp/flusper-powder.jpg" alt="Flusper Powder">
-                <h3>Flusper Powder</h3>
+            </article>
+            <article class="product" data-category="powder" aria-labelledby="flusper-powder" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                <img src="https://i.ibb.co/rf40VCpp/flusper-powder.jpg" alt="Flusper powder for metallurgical processes" loading="lazy">
+                <h3 id="flusper-powder">Flusper Powder</h3>
                 <p>A specialized fluxing agent for metallurgical processes.</p>
-            </div>
-            <div class="product" data-category="chemical" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s; display: block;">
-                <img src="https://i.ibb.co/5WvKMVnd/silico-fluoride-powder.jpg" alt="Silico Fluoride Powder">
-                <h3>Silico Fluoride Powder</h3>
+            </article>
+            <article class="product" data-category="chemical" aria-labelledby="silico-fluoride-powder" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s;">
+                <img src="https://i.ibb.co/5WvKMVnd/silico-fluoride-powder.jpg" alt="Silico fluoride powder" loading="lazy">
+                <h3 id="silico-fluoride-powder">Silico Fluoride Powder</h3>
                 <p>Used in water fluoridation and industrial applications.</p>
-            </div>
-            <div class="product" data-category="chemical" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s; display: block;">
-                <img src="https://i.ibb.co/NnrrkQsk/boric-acid-powder.jpg" alt="Boric Acid Powder">
-                <h3>Boric Acid Powder</h3>
+            </article>
+            <article class="product" data-category="chemical" aria-labelledby="boric-acid-powder" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s;">
+                <img src="https://i.ibb.co/NnrrkQsk/boric-acid-powder.jpg" alt="Boric acid powder" loading="lazy">
+                <h3 id="boric-acid-powder">Boric Acid Powder</h3>
                 <p>A versatile compound used in adhesives, flame retardants, and more.</p>
-            </div>
-            <div class="product" data-category="liquid" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s; display: none;">
-                <img src="https://i.ibb.co/398d46mn/modified-phosphoric-acid.jpg" alt="Modified Phosphoric Acid">
-                <h3>Modified Phosphoric Acid</h3>
+            </article>
+            <article class="product" data-category="liquid" aria-labelledby="modified-phosphoric-acid" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s;">
+                <img src="https://i.ibb.co/398d46mn/modified-phosphoric-acid.jpg" alt="Modified phosphoric acid" loading="lazy">
+                <h3 id="modified-phosphoric-acid">Modified Phosphoric Acid</h3>
                 <p>Enhanced with adhesive properties for specialized industrial use.</p>
-            </div>
+            </article>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    
-
     <!-- About Section -->
-    <section id="about">
+    <section id="about" aria-labelledby="about-heading">
         <div class="about-content">
-            <h2 class="section-heading">About Us</h2>
+            <h2 id="about-heading" class="section-heading">About Sagar Adhesive</h2>
             <div class="about-grid">
-                <div class="about-text" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                <div class="about-text" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s;">
                     <p class="intro-text">Welcome to <strong>Sagar Adhesive</strong>—your trusted partner for premium-quality adhesive powders and industrial chemicals.</p>
-                    <div class="luxury-highlight" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                    <div class="luxury-highlight" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s;">
                         <h3>Our Mission</h3>
                         <p>We are committed to providing innovative, sustainable, and high-quality adhesive solutions that meet the diverse needs of industries worldwide.</p>
                     </div>
-                    <div class="luxury-highlight" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
+                    <div class="luxury-highlight" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s;">
                         <h3>Why Choose Us?</h3>
                         <ul class="why-choose-list">
                             <li><strong>Premium Quality</strong> – Manufactured to the highest standards with rigorous quality control.</li>
@@ -1027,16 +1170,15 @@
                     </div>
                     <p class="closing-text">We believe in creating strong bonds—not just in our adhesives but also with our customers. Our team of experts is dedicated to providing technical support and customized solutions to meet your specific requirements.</p>
                 </div>
-                <div class="about-logo" style="opacity: 1; transform: translateY(0px); transition: opacity 0.6s, transform 0.6s;">
-                    <img src="https://i.ibb.co/CK2zFMM7/logo.png" alt="Sagar Adhesive" class="luxury-logo">
+                <div class="about-logo" style="opacity: 0; transform: translateY(20px); transition: opacity 0.6s, transform 0.6s;">
+                    <img src="https://i.ibb.co/CK2zFMM7/logo.png" alt="Sagar Adhesive Logo" class="luxury-logo" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <!-- Testimonials Section -->
-<section id="testimonials" style="background: #f8f9fa; padding: 4rem 2rem;">
+    <section id="testimonials" style="background: #f8f9fa; padding: 4rem 2rem;">
     <div class="container" style="max-width: 1200px; margin: 0 auto;">
         <h2 class="section-heading" style="text-align: center; margin-bottom: 3rem; color: #333; position: relative; display: inline-block; left: 50%; transform: translateX(-50%);">
             What Our Clients Say
@@ -1071,13 +1213,7 @@
 </section>
 
     <!-- Contact Section -->
-    <!-- Contact Section -->
-<!-- Contact Section -->
-<!-- Contact Section -->
-<!-- Contact Section -->
-<!-- Contact Info -->
-<!-- Contact Section -->
-<section id="contact" style="padding: 6rem 2rem; background: #fff; font-family: 'Segoe UI', sans-serif;">
+    <section id="contact" style="padding: 6rem 2rem; background: #fff; font-family: 'Segoe UI', sans-serif;">
   <div style="max-width: 1200px; margin: 0 auto;">
 
     <!-- Heading -->
@@ -1176,295 +1312,219 @@
   </div>
 </section>
 
-
-
-
-
     <!-- Newsletter Section -->
     
 
-
     <!-- Footer -->
-    <footer style="border-top: 3px solid gold;">
-    <p>© 2025 Sagar Adhesive. All Rights Reserved.</p>
-    <div class="socials">
-        <a href="https://www.instagram.com/sagar_adhesive/"><i class="fab fa-instagram"></i></a>
-        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=sagaradhesivejhs@gmail.com&amp;su=Interest%20in%20Your%20Product&amp;body=I%20am%20interested%20in%20buying%20your%20products."><i class="fas fa-envelope"></i></a>
-        <a href="https://wa.me/918318330811"><i class="fab fa-whatsapp"></i></a>
-    </div>
-</footer>
+    <footer>
+        <p>© 2025 Sagar Adhesive. All Rights Reserved.</p>
+        <div class="socials" aria-label="Social media links">
+            <a href="https://www.instagram.com/sagar_adhesive/" target="_blank" rel="noopener" aria-label="Follow Sagar Adhesive on Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:sagaradhesivejhs@gmail.com" target="_blank" rel="noopener" aria-label="Email Sagar Adhesive"><i class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/918318330811" target="_blank" rel="noopener" aria-label="Contact Sagar Adhesive on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </footer>
 
     <!-- Floating Buttons -->
-    <div class="float-buttons">
-        <a href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=sagaradhesivejhs@gmail.com&amp;su=Interest%20in%20Your%20Product&amp;body=I%20am%20interested%20in%20buying%20your%20products." class="gmail-float">
+    <div class="float-buttons" aria-label="Quick contact options">
+        <a href="mailto:sagaradhesivejhs@gmail.com" target="_blank" rel="noopener" class="gmail-float" aria-label="Email Sagar Adhesive">
             <i class="fas fa-envelope"></i>
         </a>
-        <a href="https://wa.me/918318330811" class="whatsapp-float">
+        <a href="https://wa.me/918318330811" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Contact Sagar Adhesive on WhatsApp">
             <i class="fab fa-whatsapp"></i>
         </a>
     </div>
 
-    <!-- Back to Top Button has been removed but css jss have to be removed -->
-    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top" style="display: none;"><i class="fas fa-arrow-up"></i></button>
 
-    <script>
+    <script defer="">
         // Loading Animation
-        window.addEventListener('load', function() {
+        window.addEventListener('load', () => {
             const loader = document.querySelector('.loader');
-            setTimeout(() => {
-                loader.classList.add('loader-hidden');
-                loader.addEventListener('transitionend', () => {
-                    document.body.removeChild(loader);
-                });
-            }, 1000);
+            if (loader) {
+                setTimeout(() => {
+                    loader.classList.add('loader-hidden');
+                    loader.addEventListener('transitionend', () => {
+                        if (loader && loader.parentNode) {
+                            loader.remove();
+                        }
+                    });
+                }, 1000);
+            }
         });
 
         // Smooth Scrolling Navigation
         document.querySelectorAll('nav ul li a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
+            anchor.addEventListener('click', e => {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const target = document.querySelector(anchor.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth' });
                 
-                // Update active state
                 document.querySelectorAll('nav ul li a').forEach(link => {
-                    link.classList.remove('active');
+                    link.removeAttribute('aria-current');
                 });
-                this.classList.add('active');
+                anchor.setAttribute('aria-current', 'page');
             });
         });
 
         // Update active link on scroll
-        window.addEventListener('scroll', function() {
-            let fromTop = window.scrollY + 100;
-            
+        window.addEventListener('scroll', () => {
+            const fromTop = window.scrollY + 100;
             document.querySelectorAll('nav ul li a').forEach(link => {
-                let section = document.querySelector(link.getAttribute('href'));
-                
-                if (
-                    section.offsetTop <= fromTop &&
-                    section.offsetTop + section.offsetHeight > fromTop
-                ) {
-                    link.classList.add('active');
+                const section = document.querySelector(link.getAttribute('href'));
+                if (section.offsetTop <= fromTop && section.offsetTop + section.offsetHeight > fromTop) {
+                    link.setAttribute('aria-current', 'page');
                 } else {
-                    link.classList.remove('active');
+                    link.removeAttribute('aria-current');
                 }
             });
         });
 
         // Product Filtering
         document.querySelectorAll('.filter-btn').forEach(button => {
-            button.addEventListener('click', function() {
-                // Update active button
+            button.addEventListener('click', () => {
                 document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.setAttribute('aria-selected', 'false');
                     btn.classList.remove('active');
                 });
-                this.classList.add('active');
+                button.setAttribute('aria-selected', 'true');
+                button.classList.add('active');
                 
-                // Filter products
-                const filter = this.getAttribute('data-filter');
+                const filter = button.getAttribute('data-filter');
                 document.querySelectorAll('.product').forEach(product => {
-                    if (filter === 'all' || product.getAttribute('data-category').includes(filter)) {
-                        product.style.display = 'block';
+                    product.style.display = (filter === 'all' || product.getAttribute('data-category') === filter) ? 'block' : 'none';
+                });
+            });
+        });
+
+        // Testimonials Slider
+        const slidesContainer = document.querySelector('.slides');
+        const nextBtn = document.querySelector('.next');
+        const prevBtn = document.querySelector('.prev');
+        const testimonialSlider = document.querySelector('.testimonial-slider');
+        if (slidesContainer && nextBtn && prevBtn && testimonialSlider) {
+            let currentSlide = 0;
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+            let autoSlideInterval;
+
+            function showSlide(index) {
+                currentSlide = index >= totalSlides ? 0 : index < 0 ? totalSlides - 1 : index;
+                slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+
+            function startAutoSlide() {
+                autoSlideInterval = setInterval(() => {
+                    showSlide(currentSlide + 1);
+                }, 5000);
+            }
+
+            function stopAutoSlide() {
+                clearInterval(autoSlideInterval);
+            }
+
+            if (slides.length > 0) {
+                showSlide(0);
+                startAutoSlide();
+            }
+
+            nextBtn.addEventListener('click', () => {
+                stopAutoSlide();
+                showSlide(currentSlide + 1);
+                startAutoSlide();
+            });
+
+            prevBtn.addEventListener('click', () => {
+                stopAutoSlide();
+                showSlide(currentSlide - 1);
+                startAutoSlide();
+            });
+
+            testimonialSlider.addEventListener('mouseenter', stopAutoSlide);
+            testimonialSlider.addEventListener('mouseleave', startAutoSlide);
+        }
+
+        // Contact Form Submission
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', async e => {
+                e.preventDefault();
+                const form = e.target;
+                const submitBtn = document.getElementById('submitBtn');
+                const btnText = submitBtn.querySelector('.btn-text');
+                const spinner = submitBtn.querySelector('.loading-spinner');
+                const formData = new FormData(form);
+
+                btnText.style.display = 'none';
+                spinner.style.display = 'block';
+                submitBtn.disabled = true;
+
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
+                    });
+                    if (response.ok) {
+                        document.getElementById('formSuccess').style.display = 'block';
+                        document.getElementById('formError').style.display = 'none';
+                        form.reset();
                     } else {
-                        product.style.display = 'none';
+                        throw new Error('Form submission failed');
+                    }
+                } catch (error) {
+                    document.getElementById('formError').style.display = 'block';
+                    document.getElementById('formSuccess').style.display = 'none';
+                } finally {
+                    btnText.style.display = 'block';
+                    spinner.style.display = 'none';
+                    submitBtn.disabled = false;
+                }
+            });
+
+            // Form Validation
+            document.querySelectorAll('#contactForm input, #contactForm textarea').forEach(input => {
+                input.addEventListener('blur', () => {
+                    const errorElement = input.parentElement.querySelector('.error-message');
+                    if (!input.checkValidity()) {
+                        errorElement.textContent = input.validationMessage;
+                        errorElement.style.display = 'block';
+                    } else {
+                        errorElement.style.display = 'none';
                     }
                 });
             });
-        });
-
-        // Animated Counter for Stats
-        function animateCounters() {
-            const counters = document.querySelectorAll('.counter');
-            const speed = 200;
-            
-            counters.forEach(counter => {
-                const target = +counter.getAttribute('data-target');
-                const count = +counter.innerText;
-                const increment = target / speed;
-                
-                if(count < target) {
-                    counter.innerText = Math.ceil(count + increment);
-                    setTimeout(animateCounters, 1);
-                } else {
-                    counter.innerText = target;
-                }
-            });
         }
-
-        // Trigger when stats section is in view
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if(entry.isIntersecting) {
-                    animateCounters();
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {threshold: 0.5});
-
-        const statsSection = document.getElementById('stats');
-        if(statsSection) {
-            observer.observe(statsSection);
-        }
-
-        // Testimonials Slider
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
-        const totalSlides = slides.length;
-        const slidesContainer = document.querySelector('.slides');
-        let autoSlideInterval;
-
-        function showSlide(index) {
-            // Ensure index stays within bounds
-            if (index >= totalSlides) currentSlide = 0;
-            else if (index < 0) currentSlide = totalSlides - 1;
-            else currentSlide = index;
-            
-            slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
-        }
-
-        function startAutoSlide() {
-            autoSlideInterval = setInterval(() => {
-                currentSlide++;
-                showSlide(currentSlide);
-            }, 5000);
-        }
-
-        function stopAutoSlide() {
-            clearInterval(autoSlideInterval);
-        }
-
-        // Initialize slider
-        showSlide(0);
-        startAutoSlide();
-
-        // Navigation buttons
-        document.querySelector('.next').addEventListener('click', () => {
-            stopAutoSlide();
-            currentSlide++;
-            showSlide(currentSlide);
-            startAutoSlide();
-        });
-
-        document.querySelector('.prev').addEventListener('click', () => {
-            stopAutoSlide();
-            currentSlide--;
-            showSlide(currentSlide);
-            startAutoSlide();
-        });
-
-        // Pause auto-slide when hovering over slider
-        document.querySelector('.testimonial-slider').addEventListener('mouseenter', stopAutoSlide);
-        document.querySelector('.testimonial-slider').addEventListener('mouseleave', startAutoSlide);
-
-        // Contact Form Submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const form = e.target;
-            const submitBtn = document.getElementById('submitBtn');
-            const btnText = submitBtn.querySelector('.btn-text');
-            const spinner = submitBtn.querySelector('.loading-spinner');
-            const formData = new FormData(form);
-            
-            // Show loading state
-            btnText.style.display = 'none';
-            spinner.style.display = 'block';
-            submitBtn.disabled = true;
-            
-            fetch(form.action, {
-                method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(response => {
-                if (response.ok) {
-                    document.getElementById('formSuccess').style.display = 'block';
-                    document.getElementById('formError').style.display = 'none';
-                    form.reset();
-                } else {
-                    throw new Error('Form submission failed');
-                }
-            })
-            .catch(error => {
-                document.getElementById('formError').style.display = 'block';
-                document.getElementById('formSuccess').style.display = 'none';
-            })
-            .finally(() => {
-                btnText.style.display = 'block';
-                spinner.style.display = 'none';
-                submitBtn.disabled = false;
-            });
-        });
-
-        // Form validation
-        document.querySelectorAll('#contactForm input, #contactForm textarea').forEach(input => {
-            input.addEventListener('blur', function() {
-                const errorElement = this.parentElement.querySelector('.error-message');
-                
-                if (!this.checkValidity()) {
-                    errorElement.textContent = this.validationMessage;
-                    errorElement.style.display = 'block';
-                } else {
-                    errorElement.style.display = 'none';
-                }
-            });
-        });
 
         // Newsletter Form
-        document.getElementById('newsletterForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const email = this.querySelector('input').value;
-            const messageElement = document.getElementById('newsletterMessage');
-            
-            // In a real implementation, you would send this to your server
-            messageElement.textContent = `Thank you for subscribing with ${email}!`;
-            messageElement.style.color = '#333';
-            this.reset();
-            
-            setTimeout(() => {
-                messageElement.textContent = '';
-            }, 5000);
-        });
-
-        // Back to Top Button
-        const backToTopBtn = document.getElementById('backToTop');
-
-        window.addEventListener('scroll', function() {
-            if (window.pageYOffset > 300) {
-                backToTopBtn.style.display = 'block';
-            } else {
-                backToTopBtn.style.display = 'none';
-            }
-        });
-
-        backToTopBtn.addEventListener('click', function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+        const newsletterForm = document.getElementById('newsletterForm');
+        if (newsletterForm) {
+            newsletterForm.addEventListener('submit', e => {
+                e.preventDefault();
+                const email = e.target.querySelector('input').value;
+                const messageElement = document.getElementById('newsletterMessage');
+                messageElement.textContent = `Thank you for subscribing with ${email}!`;
+                messageElement.style.color = '#333';
+                e.target.reset();
+                setTimeout(() => messageElement.textContent = '', 5000);
             });
-        });
+        }
 
         // Scroll Reveal Animations
         function scrollReveal() {
-            const revealElements = document.querySelectorAll('.product, .about-text, .luxury-highlight, form, .about-logo');
+            const revealElements = document.querySelectorAll('.product, .about-text, .luxury-highlight, #contactForm, .about-logo, .contact-info');
+            const screenPosition = window.innerHeight / 1.2;
             
             revealElements.forEach(element => {
-                const elementPosition = element.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.2;
-                
-                if(elementPosition < screenPosition) {
+                if (element.getBoundingClientRect().top < screenPosition) {
                     element.style.opacity = '1';
                     element.style.transform = 'translateY(0)';
                 }
             });
         }
 
-        // Set initial state
-        document.querySelectorAll('.product, .about-text, .luxury-highlight, form, .about-logo').forEach(el => {
+        document.querySelectorAll('.product, .about-text, .luxury-highlight, #contactForm, .about-logo, .contact-info').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
@@ -1472,7 +1532,17 @@
 
         window.addEventListener('scroll', scrollReveal);
         window.addEventListener('load', scrollReveal);
+
+        // Back to Top Button
+        const backToTopBtn = document.querySelector('.back-to-top');
+        if (backToTopBtn) {
+            window.addEventListener('scroll', () => {
+                backToTopBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+            });
+
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
     </script>
-
-
 </body></html>
