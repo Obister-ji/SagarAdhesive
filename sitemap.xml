@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <url>
         <loc>https://www.sagaradhesive.com/</loc>
         <lastmod>2025-05-06</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
+        <image:image>
+            <image:loc>https://i.ibb.co/CK2zFMM7/logo.png</image:loc>
+            <image:title>Sagar Adhesive Logo</image:title>
+        </image:image>
     </url>
     <url>
         <loc>https://www.sagaradhesive.com/#products</loc>
@@ -13,16 +17,120 @@
         <priority>0.8</priority>
     </url>
     <url>
+        <loc>https://www.sagaradhesive.com/products/bentonite-powder</loc>
+        <lastmod>2025-05-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://i.ibb.co/jkchNHWG/bentonite.jpg</image:loc>
+            <image:title>Bentonite Powder</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://www.sagaradhesive.com/products/dextrin-powder</loc>
+        <lastmod>2025-05-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://i.ibb.co/CsWpZ685/dextrin.jpg</image:loc>
+            <image:title>Dextrin Powder</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://www.sagaradhesive.com/products/carboxymethyl-cellulose</loc>
+        <lastmod>2025-05-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://i.ibb.co/wr0vwrr0/carboxymethyl-cellulose.jpg</image:loc>
+            <image:title>Carboxymethyl Cellulose</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://www.sagaradhesive.com/products/mona-aluminium-phosphate</loc>
+        <lastmod>2025-05-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://i.ibb.co/4whLX5FV/mona-aluminium-phosphate.jpg</image:loc>
+            <image:title>Mona Aluminium Phosphate</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://www.sagaradhesive.com/products/sodium-silicate-powder</loc>
+        <lastmod>2025-05-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://i.ibb.co/4ZdrFN4F/sodium-silicate-powder.jpg</image:loc>
+            <image:title>Sodium Silicate Powder</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://www.sagaradhesive.com/products/modified-stpp</loc>
+        <lastmod>2025-05-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://i.ibb.co/Cdmh5jD/modified-stpp.jpg</image:loc>
+            <image:title>Modified Sodium Tripolyphosphate (STPP)</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://www.sagaradhesive.com/products/modified-shmp</loc>
+        <lastmod>2025-05-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://i.ibb.co/v66bPSLq/modified-shmp.jpg</image:loc>
+            <image:title>Modified Sodium Hexametaphosphate (SHMP)</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://www.sagaradhesive.com/products/flusper-powder</loc>
+        <lastmod>2025-05-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://i.ibb.co/rf40VCpp/flusper-powder.jpg</image:loc>
+            <image:title>Flusper Powder</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://www.sagaradhesive.com/products/silico-fluoride-powder</loc>
+        <lastmod>2025-05-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://i.ibb.co/5WvKMVnd/silico-fluoride-powder.jpg</image:loc>
+            <image:title>Silico Fluoride Powder</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://www.sagaradhesive.com/products/boric-acid-powder</loc>
+        <lastmod>2025-05-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://i.ibb.co/NnrrkQsk/boric-acid-powder.jpg</image:loc>
+            <image:title>Boric Acid Powder</image:title>
+        </image:image>
+    </url>
+    <url>
+        <loc>https://www.sagaradhesive.com/products/modified-phosphoric-acid</loc>
+        <lastmod>2025-05-06</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <image:image>
+            <image:loc>https://i.ibb.co/398d46mn/modified-phosphoric-acid.jpg</image:loc>
+            <image:title>Modified Phosphoric Acid</image:title>
+        </image:image>
+    </url>
+    <url>
         <loc>https://www.sagaradhesive.com/#about</loc>
         <lastmod>2025-05-06</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
-    </url>
-    <url>
-        <loc>https://www.sagaradhesive.com/#testimonials</loc>
-        <lastmod>2025-05-06</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.6</priority>
     </url>
     <url>
         <loc>https://www.sagaradhesive.com/#contact</loc>
