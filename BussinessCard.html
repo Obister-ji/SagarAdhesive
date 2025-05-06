@@ -1,11 +1,12 @@
-<html lang="en"><head>
+<html lang="en">
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-  <meta name="description" content="Premium Digital Business Card for Sagar Adhesive - Manufacturer &amp; Supplier of Industrial Adhesives">
+  <meta name="description" content="Premium Digital Business Card for Sagar Adhesive - Manufacturer & Supplier of Industrial Adhesives">
   <title>Sagar Adhesive | Premium Digital Business Card</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&amp;family=Lora:wght@400;500;700&amp;display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css">
   <style>
@@ -61,6 +62,64 @@
     .card:hover {
       transform: translateY(-8px) scale(1.02);
       box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    }
+
+    .share-btn {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--secondary-color);
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--gold-accent);
+      font-size: 1.1rem;
+      cursor: pointer;
+      z-index: 10;
+      border: 2px solid var(--gold-accent);
+      box-shadow: var(--glow);
+      transition: var(--transition);
+    }
+
+    .share-btn:hover {
+      background: var(--gold-accent);
+      color: var(--secondary-color);
+      transform: scale(1.1);
+    }
+
+    .share-options {
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: var(--secondary-color);
+      border-radius: 15px;
+      padding: 10px;
+      box-shadow: var(--shadow);
+      z-index: 10;
+      display: none;
+      border: 1px solid var(--gold-accent);
+    }
+
+    .share-options a {
+      display: flex;
+      align-items: center;
+      padding: 8px 12px;
+      color: var(--text-color);
+      text-decoration: none;
+      border-radius: 8px;
+      transition: var(--transition);
+    }
+
+    .share-options a:hover {
+      background: rgba(212, 175, 55, 0.2);
+    }
+
+    .share-options i {
+      margin-right: 8px;
+      color: var(--gold-accent);
     }
 
     .header {
@@ -362,7 +421,7 @@
     }
 
     /* Accessibility */
-    .icon-circle:focus, .cta a:focus {
+    .icon-circle:focus, .cta a:focus, .share-btn:focus {
       outline: 3px solid var(--gold-accent);
       outline-offset: 3px;
     }
@@ -372,6 +431,19 @@
       .card {
         max-width: 360px;
         padding: 0 10px;
+      }
+
+      .share-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+        top: 15px;
+        right: 15px;
+      }
+
+      .share-options {
+        top: 50px;
+        right: 15px;
       }
 
       .header {
@@ -461,6 +533,17 @@
 </head>
 <body class="vsc-initialized">
   <div class="card animate__animated animate__fadeInUp animate__pulse shimmer-effect" style="transform: translateY(-8px) scale(1.02);">
+    <div class="share-btn" id="shareBtn">
+      <i class="fas fa-share-alt"></i>
+    </div>
+    <div class="share-options" id="shareOptions">
+      <a href="#" id="shareWhatsApp"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="#" id="shareFacebook"><i class="fab fa-facebook"></i> Facebook</a>
+      <a href="#" id="shareTwitter"><i class="fab fa-twitter"></i> Twitter</a>
+      <a href="#" id="shareLinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="#" id="copyLink"><i class="fas fa-link"></i> Copy Link</a>
+    </div>
+
     <div class="header">
       <h2>Sagar Adhesive</h2>
       <p>Premium Adhesive Solutions</p><p></p>
@@ -492,7 +575,7 @@
       </div>
 
       <div class="cta animate__animated animate__fadeInUp animate__delay-3s">
-        <a href="https://vcard.link/card/DGuB.vcf" download="">
+        <a href="#" id="downloadVCard">
           <i class="fas fa-address-card"></i> Save Our Contact
         </a>
       </div>
@@ -506,6 +589,84 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const card = document.querySelector('.card');
+      const shareBtn = document.getElementById('shareBtn');
+      const shareOptions = document.getElementById('shareOptions');
+      const currentUrl = encodeURIComponent(window.location.href);
+      const shareText = encodeURIComponent("Check out Sagar Adhesive's digital business card");
+
+      // Toggle share options
+      shareBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        shareOptions.style.display = shareOptions.style.display === 'block' ? 'none' : 'block';
+      });
+
+      // Close share options when clicking outside
+      document.addEventListener('click', function() {
+        shareOptions.style.display = 'none';
+      });
+
+      // Share functions
+      document.getElementById('shareWhatsApp').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.open(`https://wa.me/?text=${shareText}%20${currentUrl}`, '_blank');
+      });
+
+      document.getElementById('shareFacebook').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.open(`https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`, '_blank');
+      });
+
+      document.getElementById('shareTwitter').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.open(`https://twitter.com/intent/tweet?text=${shareText}&url=${currentUrl}`, '_blank');
+      });
+
+      document.getElementById('shareLinkedIn').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.open(`https://www.linkedin.com/shareArticle?mini=true&url=${currentUrl}&title=${shareText}`, '_blank');
+      });
+
+      document.getElementById('copyLink').addEventListener('click', function(e) {
+        e.preventDefault();
+        navigator.clipboard.writeText(window.location.href).then(function() {
+          alert('Link copied to clipboard!');
+        }, function() {
+          alert('Failed to copy link. Please try again.');
+        });
+      });
+
+      // Generate and download vCard
+      document.getElementById('downloadVCard').addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Create vCard content with correct details
+        const vCardData = [
+          'BEGIN:VCARD',
+          'VERSION:3.0',
+          'FN:Sagar Adhesive',
+          'ORG:Sagar Adhesive;Manufacturer & Supplier of Industrial Adhesives',
+          'TEL;TYPE=CELL:+918318330811',
+          'EMAIL:sagaraadhesivejhs@gmail.com',
+          'URL:https://sagaradhesive.com',
+          'NOTE:Premium Adhesive Solutions',
+          'END:VCARD'
+        ].join('\n');
+        
+        // Create download link
+        const blob = new Blob([vCardData], { type: 'text/vcard' });
+        const url = URL.createObjectURL(blob);
+        
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = 'Sagar_Adhesive.vcf';
+        link.style.display = 'none';
+        document.body.appendChild(link);
+        link.click();
+        
+        // Clean up
+        document.body.removeChild(link);
+        URL.revokeObjectURL(url);
+      });
 
       // Enhanced hover effect for desktop
       card.addEventListener('mouseenter', function() {
@@ -566,5 +727,5 @@
       }
     });
   </script>
-
-</body></html>
+</body>
+</html>
